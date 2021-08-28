@@ -1,94 +1,90 @@
-<hr />
-<div class="container-fluid page">
-  <div class="container">
-    <form class="form-inline form-group">
-      <input
-        class="form-control mr-2"
-        type="text"
-        name="search"
-        placeholder="All of github"
-        id="search"
-        [(ngModel)]="username"
-      />
-      <button
-        id="search"
-        class="btn btn-outline-success btn-submit"
-        (click)="findProfile()"
-        type="submit"
-      >
-        Search
-      </button>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container-fluid">
+    <div id="head">
+        <h1 id="hh">GITHUB SEARCH</h1>
+        <p id="pp" >An application for searching github repositories</p>
+    </div>
+    <form class="search-form">
+        <div class="form-group">
+            <input type="text" class="form-control " placeholder="search username" [(ngModel)]="username"
+                name="username" (keyup)="findProfile()">
+        </div>
     </form>
 
-    <p id="error"></p>
-    <div class="card" *ngIf="profile">
-      <div class="card-header">
-        <button
-          (click)="toggleRepo()"
-          id="repositories"
-          class="btn btn-success float-right"
-        >
-          REPOS
-        </button>
-        <a href="{{ profile.html_url }}" target="_blank">
-          <h3 appHover class="text-white username">{{ profile.login }}</h3>
-        </a>
-        <span class="bio">{{ profile.bio }}</span>
-        <li class="list-group-item">
-          <span class="badge badge-light mr-2"
-            >FOLLOWERS: {{ profile.followers }}</span
-          >
-          <span class="badge badge-light mr-2"
-            >FOLLOWING: {{ profile.following }}</span
-          >
-          <span class="badge badge-light mr-2"
-            >REPOSITORIES: {{ profile.public_repos }}</span
-          >
-          <span class="badge badge-light mr-2"
-            >PROFILE STARS: {{ profile.public_gists }}</span
-          >
-        </li>
-      </div>
-      <div class="row" [hidden]="hideUser">
-        <div class="col-sm-6">
-          <figure>
-            <img
-              class="card-img-top img-thumbnail"
-              src="{{ profile.avatar_url }}"
-              alt="user-profile"
-            />
-          </figure>
-        </div>
-        <div class="col-sm-6">
-          <ul id="labels" class="list-group list-group-flush">
-            <li id="name" class="list-group-item">
-              <strong> {{ profile.name }} </strong>
-            </li>
-            <li class="list-group-item" *ngIf="profile.hireable">
-              Available for hire
-            </li>
-            <li class="list-group-item" *ngIf="profile.company">
-              &nbsp;{{ profile.company }}
-            </li>
 
-            <li class="list-group-item" *ngIf="profile.email">
-              &nbsp;{{ profile.email }}
-            </li>
+    <div *ngIf="profile">
+        <div class="card">
+            <div class="card-header">
+                {{ profile.name }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-thumbnail githib-avatar" src="{{ profile.avatar_url }}" alt="" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="stats">
+                            <span class="badge badge-primary mr-1">
+                                {{ profile.public_repos }} Public Repos</span>
+                            <span class="badge badge-secondary mr-1">{{ profile.public_gists }} Gists</span>
+                            <span class="badge badge-success mr-1">
+                                {{ profile.followers }} Followers</span>
+                            <span class="badge badge-danger mr-1">
+                                {{ profile.following }} Following</span>
+                        </div>
 
-            <li class="list-group-item" *ngIf="profile.blog">
-              <a href="{{ profile.blog }}" target="_blank" class="text-info">
-                {{ profile.blog }}
-              </a>
-            </li>
-            <li class="list-group-item" *ngIf="profile.location">
-              Profile Location: {{ profile.location }}
-            </li>
-            <li id="date" class="list-group-item">
-              Last Active: {{ profile.updated_at | dateCount }}
-            </li>
-          </ul>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <strong>Username:</strong>{{ profile.login }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Location:</strong>{{ profile.location }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Email:</strong>{{ profile.email }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Blog:</strong>{{profile .blog }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Member Since</strong>{{ profile.created_at|date }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success">View profile on github</a></p>
+            </div>
         </div>
-      </div>
+
+
+        <div class="repotitle">
+            <h2>Repositories</h2>
+
+        </div>
+        <hr>
+
+
+        <div class="card-columns">
+            <div class="card" *ngFor="let repo of repos">
+
+                <div class="card-body">
+                    <div id="name">
+                        <h4 id="name d-flex justify-content-between align-items-center">{{repo.name}}</h4>
+                    </div>
+                    <div id="des">
+                        <p class="card-textd-flex justify-content-between align-items-center">{{repo.description}}</p>
+                    </div>
+                    <p class="card-textd-flex justify-content-between align-items-center">updated on:<i
+                            class="fa fa-clock-o" aria-hidden="true">{{repo.created_at | date}}</i></p>
+                    <a href="{{repo.html_url}}" class="text-align-center" target="_blank" class="btn btn-info">View this
+                        project on github</a>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

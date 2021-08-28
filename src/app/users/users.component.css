@@ -1,0 +1,63 @@
+.list-group-item,
+.card {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card {
+    height: 520px;
+}
+
+.card-img-top {
+    width: 55%;
+}
+
+.form-control {
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 10%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-submit {
+    margin-top: 2%;
+}
+
+.mr-2 {
+    background-color: honeydew;
+}
+
+.badge {
+    background-color: black;
+    color: honeydew;
+}
+
+a {
+    text-decoration: none;
+}
+
+.img-thumbnail {
+    margin-left: 5%;
+    margin-top: 3%;
+    border-radius: 250px;
+    border-style: double;
+    border-width: 1%;
+    border-color: green;
+}
+
+.bio {
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+#labels {
+    margin-right: 15%;
+    margin-top: 14%;
+}
+
+.repos {
+    height: 80px;
+    width: 12220px;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}

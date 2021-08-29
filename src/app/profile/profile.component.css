@@ -27,10 +27,8 @@
        
       }
    
-      #bio li{
-        margin-top: 1%;
-      }
-      .repotitle{
+      
+      .repoheader{
         text-align: center;
         font-size: 60px;
         color: whitesmoke;

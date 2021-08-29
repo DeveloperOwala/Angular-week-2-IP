@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './profile/profile.component';
 import { DateCountPipe } from './date-count.pipe';
 import { BorderDirective } from './border.directive';
+import { ProfileComponent } from './profile/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     DateCountPipe,
-    BorderDirective
+    BorderDirective,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-export class Users {
+export class User {
     public username!: string;
     public html_url!: string;
     public location!: string;
@@ -6,5 +6,4 @@ export class Users {
     public following!: number;
     public avatar_url!: string;
     public created_at!: Date;
-    }
-    
+}

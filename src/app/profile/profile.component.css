@@ -13,32 +13,27 @@
     margin:5px;
   }
  
-  
-  #header h1{
-    font-size: 30px;
-    font-family: 'system-ui', cursive;
+  #header{
+    background-color: yellow;
+  }
+  #head h1{
+    background-color: blueviolet;
+    color: white;
     text-align: center;
-    border-bottom: 2px solid rgb(182, 26, 122);
-    padding: 10px;
-    text-shadow:0 2px goldenrod;
+    font-size: 30px;
+    padding: 15px;
     }
-    #header p{
-      font-size: 20px;
+    #head p{
+      color: brown;
+      font-size: 30px;
       text-align: center;
-    
+       
       }
-      #pp{
-        color:whitesmoke
-      }
-      #hh{
-        color:lime;
-      }
+/*      
       #dec{
         text-align: center;
-      }
-      /* #profile.card{
-      margin-left:0%;
       } */
+   
       #bio li{
         margin-top: 1%;
       }

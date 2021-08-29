@@ -1,9 +1,8 @@
 .container-fluid{
+background-attachment: fixed;
   background-image: url('https://english.cdn.zeenews.com/sites/default/files/2015/04/07/343913-tea.jpg')
 }
 .search-form{
-    padding-top:0px;
-    width: 30%;
     text-align: center;
     margin-left: 40%;
   }
@@ -16,25 +15,27 @@
     margin:5px;
   }
  
-  #head h1{
-    background-color: blueviolet;
+  #head h1{  
     color: white;
     text-align: center;
     font-size: 30px;
     padding: 15px;
     }
-    #head p{
-      color: brown;
+      #head{
+        background-color: blueviolet;
+      }
+    #head h2{
+      color:white;
       font-size: 30px;
       text-align: center;
-       
+       padding-bottom: 15px;
       }
    
       
       .repoheader{
         text-align: center;
         font-size: 60px;
-        color: whitesmoke;
+        color:blue;
         text-transform: uppercase;
       }
       #repotitle{

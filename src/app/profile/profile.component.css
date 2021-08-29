@@ -34,7 +34,7 @@
         color: whitesmoke;
         text-transform: uppercase;
       }
-      #name{
+      #repotitle{
         color: rgb(10, 10, 10);
       font-size: 30px;
       text-transform: uppercase;
@@ -44,9 +44,9 @@
       text-align: center;
       border-bottom: 2px solid rgb(168, 56, 56);
       padding: 10px;
-      background-color: blue;
+      background-color: rgb(219, 10, 209);
       }
-      #des{
+      #buttons{
         font-size: 20px;
         color:rgb(0, 0, 0);
       }

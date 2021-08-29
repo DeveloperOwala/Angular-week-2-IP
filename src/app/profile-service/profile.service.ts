@@ -6,9 +6,9 @@ import {HttpClient} from '@angular/common/http'
 export class ProfileService {
   private username:any;
   private clientid!: "8035273870d0778107b0";
-  private clientsecret!:"b4aee1eba8670d25a47c4480e9484711764a3548"
+  private clientsecret!:"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"
   constructor(private http:HttpClient) { 
-    this.username ="MUTHAKABRIAN"
+    this.username ="DeveloperOwala"
   }
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id="+ this.clientid + "&client_secret=" + this.clientsecret)

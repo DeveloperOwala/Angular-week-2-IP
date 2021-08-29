@@ -4,14 +4,14 @@ import {FormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
+import { UsersComponent } from './profile/profile.component';
 import { DateCountPipe } from './date-count.pipe';
 import { BorderDirective } from './border.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
+    UsersComponent,
     DateCountPipe,
     BorderDirective
   ],

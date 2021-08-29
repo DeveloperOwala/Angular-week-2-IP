@@ -13,9 +13,6 @@
     margin:5px;
   }
  
-  #header{
-    background-color: yellow;
-  }
   #head h1{
     background-color: blueviolet;
     color: white;
@@ -29,17 +26,10 @@
       text-align: center;
        
       }
-/*      
-      #dec{
-        text-align: center;
-      } */
    
       #bio li{
         margin-top: 1%;
       }
-      /* .list-group-item{
-        margin-top: 40%;
-      } */
       .repotitle{
         text-align: center;
         font-size: 60px;

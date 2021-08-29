@@ -14,7 +14,7 @@
   }
  
   
-  #head h1{
+  #header h1{
     font-size: 30px;
     font-family: 'system-ui', cursive;
     text-align: center;
@@ -22,7 +22,7 @@
     padding: 10px;
     text-shadow:0 2px goldenrod;
     }
-    #head p{
+    #header p{
       font-size: 20px;
       text-align: center;
     

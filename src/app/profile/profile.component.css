@@ -1,8 +1,8 @@
 .search-form{
     padding-top:0px;
-    width: 50%;
+    width: 30%;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 40%;
   }
   h1{
     text-align: center;
@@ -12,8 +12,7 @@
   .badge{
     margin:5px;
   }
-  /* .card-body{
-    margin: 7px; */
+ 
   
   #head h1{
     font-size: 30px;

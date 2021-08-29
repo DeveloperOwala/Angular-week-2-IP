@@ -9,11 +9,10 @@
     </div>
     <form class="search-form">
         <div class="form-group">
-            <input type="text" class="form-control " placeholder="search username" [(ngModel)]="username"
+            <input type="text" class="form-control " placeholder="search github username" [(ngModel)]="username"
                 name="username" (keyup)="findProfile()">
         </div>
     </form>
-
 
     <div *ngIf="profile">
         <div class="card">

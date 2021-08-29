@@ -10,7 +10,7 @@ export class UsersComponent implements OnInit {
 
   profile:any;
   repos:any;
-  username:string;
+  username!:string;
 
 constructor(private profileService:ProfileService){
   this.profileService.updateProfile(this.username);

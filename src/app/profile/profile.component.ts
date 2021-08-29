@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {ProfileService} from '../profile-service/profile.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class UsersComponent implements OnInit {
+export class ProfileComponent implements OnInit {
 
   profile:any;
   repos:any;
@@ -39,7 +39,7 @@ findProfile(){
 }
 
   ngOnInit() {
-    this.profileService.updateProfile('MUTHAKABRIAN');
+    this.profileService.updateProfile('DeveloperOwala');
     
     this.profileService.getProfileInfo().subscribe(profile => this.profile = profile);
 

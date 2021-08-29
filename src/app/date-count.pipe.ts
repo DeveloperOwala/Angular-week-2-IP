@@ -21,7 +21,7 @@ export class DateCountPipe implements PipeTransform {
       };
       let counter;
       for (const i in intervals) {
-        counter = Math.floor(seconds / intervals[i]);
+        counter = Math.floor(seconds);
         if (counter > 0)
         if (counter === 1) {
           return counter + ' ' + i + ' ago';
